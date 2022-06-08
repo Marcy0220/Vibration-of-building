@@ -257,6 +257,7 @@ for i in range(n):
     axes[i].plot(o[i], y[i], linestyle='-', color='black')
     axes[i].plot(x[i], y[i], marker='o', linestyle='', color='blue')
     axes[i].plot(x[i], y[i], linestyle='-', color='blue')
+    axes[i].set_xlabel('ω={} rad/s'.format("%.4f" % w[n-i-1][n-i-1]), fontdict={'family': 'Times New Roman', 'color' : 'black', 'weight': 'bold','size': 14})
     axes[i].set_xlim(-5, 5)
     if i == 0:
         axes[i].set_title('1st mode', fontdict={'family': 'Times New Roman', 'color' : 'black', 'weight': 'bold','size': 28})

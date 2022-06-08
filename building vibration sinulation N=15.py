@@ -261,6 +261,7 @@ for i in range(2):
         axes[i, j].plot(o[(i*3+j)], y[(i*3+j)], linestyle='-', color='black')
         axes[i, j].plot(x[(i*3+j)], y[(i*3+j)], marker='o', linestyle='', color='blue')
         axes[i, j].plot(x[(i*3+j)], y[(i*3+j)], linestyle='-', color='blue')
+        axes[i, j].set_xlabel('ω={} rad/s'.format("%.4f" % w[n-(i*3+j)-1][n-(i*3+j)-1]), fontdict={'family': 'Times New Roman', 'color' : 'black', 'weight': 'bold','size': 14})
         axes[i, j].set_xlim(-3, 3)
         if (i*3+j+1) == 1:
             axes[i, j].set_title('1st mode', fontdict={'family': 'Times New Roman', 'color' : 'black', 'weight': 'bold','size': 28})
@@ -270,3 +271,4 @@ for i in range(2):
             axes[i, j].set_title('3rd mode', fontdict={'family': 'Times New Roman', 'color' : 'black', 'weight': 'bold','size': 28})
         else:
             axes[i, j].set_title('{}th mode'.format(i*3+j+1), fontdict={'family': 'Times New Roman', 'color' : 'black', 'weight': 'bold','size': 28})
+plt.subplots_adjust(hspace=0.3)
